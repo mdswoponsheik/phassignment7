@@ -67,16 +67,16 @@ const FriendsDetails = () => {
           </div>
           <div className="">
             <div className="flex justify-between gap-3">
-              <div className="bg-white shadow-gray-400 p-4 rounded-md h-30 text-center w-1/3">
-                <p className='text-2xl font-bold '>{expectedFriend.days_since_contact}</p>
+              <div className="bg-white shadow-gray-400 p-4 rounded-md h-35 sm:h-30 text-center w-1/3">
+                <p className='text-xl sm:text-2xl font-bold '>{expectedFriend.days_since_contact}</p>
                 <p>Days since contact</p>
               </div>
-              <div className="bg-white shadow-gray-400 p-4 rounded-md h-30 text-center w-1/3">
-                <p className='text-2xl font-bold '>{expectedFriend.goal}</p>
+              <div className="bg-white shadow-gray-400 p-4 rounded-md h-35 sm:h-30 text-center w-1/3">
+                <p className=' text-xl sm:text-2xl font-bold '>{expectedFriend.goal}</p>
                 <p>Goals(Days)</p>
               </div>
-              <div className="bg-white shadow-gray-400 p-4 rounded-md h-30 text-center w-1/3">
-                <p className='text-2xl font-bold '>{expectedFriend.next_due_date}</p>
+              <div className="bg-white shadow-gray-400 p-4 rounded-md h-35 sm:h-30 text-center w-1/3">
+                <p className='text-xl sm:text-2xl font-bold '>{expectedFriend.next_due_date}</p>
                 <p>Next Due Date</p>
               </div>
             </div>
