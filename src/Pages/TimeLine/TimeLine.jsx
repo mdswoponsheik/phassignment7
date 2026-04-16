@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { timeLineContext } from '../../layout/mainLayout/MainLayout';
 import { MdInbox } from 'react-icons/md';
 import { TbMessage, TbPhoneCall, TbVideo } from 'react-icons/tb';
@@ -9,17 +9,21 @@ const TimeLine = () => {
   const statesIcons = (type) => {
     if (type === "call") {
       return <TbPhoneCall className='text-green-400 ' size={30} />
-    } else if (type === "message") {
+    } else if (type === "text") {
       return <TbMessage className='text-blue-400 ' size={30} />
     } else
       return <TbVideo className='text-purple-400 ' size={30} />
 
   };
 
-  const filterTimeLine = (data) => {
-    return timeLine.filter((events) => events.type === data);
-  };
-  console.log(filterTimeLine("call"))
+  const [filter, setFilter] = useState("all");
+
+  const filteredData =
+  filter === "all"
+    ? timeLine
+    : timeLine.filter(item => item.type === filter);
+
+    console.log(filteredData);
 
   return (
     <div className='bg-gray-100 min-h-screen'>
@@ -28,17 +32,17 @@ const TimeLine = () => {
 
         <MdInbox size={70} />
         <h2 className=''> TimeLine is Empty</h2>
-      </div> : <div className="max-w-11/12 sm:max-w-10/12 mx-auto  py-10 px-5 border-t border-gray-300">
-        <div className="">
-          <select onChange={(e) => setFilter(e.target.value)}>
+      </div> : <div className="max-w-11/12 sm:max-w-10/12 mx-auto p-5 border-t border-gray-300">
+        <div className="mb-5">
+          <select className='w-30 h-10 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md' onChange={(e) => setFilter(e.target.value)}>
             <option value="all">All</option>
             <option value="call">Call</option>
             <option value="text">Text</option>
             <option value="video">Video</option>
           </select>
         </div>
-        {timeLine.map((event) => (
-          <div key={event.id} className="flex items-center gap-3 mb-10 bg-white p-4 rounded-md shadow-gray-400">
+        {filteredData.map((event, index) => (
+          <div key={event.id + '-' + index} className="flex items-center gap-3 mb-10 bg-white p-4 rounded-md shadow-gray-400">
             <div className="">
               <p >{statesIcons(event.type)}</p>
             </div>
