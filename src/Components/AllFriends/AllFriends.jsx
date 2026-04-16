@@ -1,8 +1,10 @@
 import React, { use } from 'react'
+import { Link } from 'react-router'
 
 
 
 const AllFriends = ({ friends }) => {
+    
 
     const statusColors = (status) => {
         if(status === "on-track")
@@ -18,7 +20,7 @@ const AllFriends = ({ friends }) => {
                 <h2 className='text-2xl font-bold mb-3'>My Friends</h2>
                 <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {friends.map(friend => (
-                        <div key={friend.id} className="bg-white shadow-gray-400 p-4 rounded-md items-center text-center">
+                        <Link to={`/friendsDetails/${friend.id}`} key={friend.id} className="bg-white shadow-gray-400 p-4 rounded-md items-center text-center">
                             <div className="flex justify-center mb-3">
                                 <img className='rounded-full' src={friend.picture} alt={friend.name} />
                             </div>
@@ -28,7 +30,7 @@ const AllFriends = ({ friends }) => {
                         <p className='text-black bg-green-300 rounded-4xl w-20 m-auto p-1'>{friend.tags[0]}</p>
                         <p className={`${statusColors(friend.status)} text-white rounded-4xl w-25 m-auto mt-2 p-1`}>{friend.status}</p>
                         </div>
-                    </div>))}
+                    </Link>))}
                     
                 </div>
             </div>

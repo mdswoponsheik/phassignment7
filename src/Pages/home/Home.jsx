@@ -4,7 +4,7 @@ import AllFriends from '../../Components/AllFriends/AllFriends'
 
 
 
-const Home = () => {
+const Home = ({ timeLine }) => {
 
 
 
@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <div>
       <Bannar friends={friends} />
-      <AllFriends friends={friends} />
+      <AllFriends friends={friends} timeLine={timeLine} />
     </div>
   )
 }

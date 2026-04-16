@@ -7,6 +7,7 @@ import Navbar from './Components/navbar/Navbar'
 import MainLayout from './layout/mainLayout/MainLayout'
 import TimeLine from './Pages/TimeLine/TimeLine'
 import Stats from './Pages/Stats/Stats'
+import FriendsDetails from './Pages/FriendsDetails/FriendsDetails'
 
 let router = createBrowserRouter([
   {
@@ -15,6 +16,12 @@ let router = createBrowserRouter([
     children: [
       { path: '/',
         element: <Home />
+       },
+       {
+        path:'/friendsDetails/:id',
+        element: <FriendsDetails />,
+        // loader: ({params}) => fetch(`/public/friends.json/${params.id}`),
+        loader: () => fetch("/public/friends.json")
        },
        {
         path:'/timeline',
