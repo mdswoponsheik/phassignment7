@@ -1,9 +1,12 @@
 import React from 'react'
+import Bannar from '../../Components/bannar/Bannar'
+import AllFriends from '../../Components/AllFriends/AllFriends'
 
 const Home = () => {
   return (
     <div>
-      <h2 className='h-201'>Welcome to the Home Page</h2>
+      <Bannar />
+      <AllFriends />
     </div>
   )
 }
