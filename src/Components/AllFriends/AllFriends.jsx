@@ -8,7 +8,7 @@ const AllFriends = ({ friends }) => {
         if(status === "on-track")
             return "bg-green-800"
         else if(status === "almost due")
-            return "bg-yellow-400"
+            return "bg-yellow-500"
         else
             return "bg-red-600"
     }

@@ -94,5 +94,53 @@
     "bio": "Old school friend who loves art and design. We share creative inspiration.",
     "goal": 14,
     "next_due_date": "2026-04-22"
+  },
+  {
+    "id": 9,
+    "name": "Arif Mahmud",
+    "picture": "https://randomuser.me/api/portraits/men/41.jpg",
+    "email": "arif.mahmud@gmail.com",
+    "days_since_contact": 15,
+    "status": "overdue",
+    "tags": ["college", "travel buddy"],
+    "bio": "We love traveling together and exploring new places across Bangladesh.",
+    "goal": 10,
+    "next_due_date": "2026-04-11"
+  },
+  {
+    "id": 10,
+    "name": "Mehjabin Chowdhury",
+    "picture": "https://randomuser.me/api/portraits/women/34.jpg",
+    "email": "mehjabin.chy@gmail.com",
+    "days_since_contact": 11,
+    "status": "almost due",
+    "tags": ["university", "study partner"],
+    "bio": "Studied CSE together. We still discuss coding problems and career plans.",
+    "goal": 14,
+    "next_due_date": "2026-04-19"
+  },
+  {
+    "id": 11,
+    "name": "Rakibul Islam",
+    "picture": "https://randomuser.me/api/portraits/men/58.jpg",
+    "email": "rakibul.islam@gmail.com",
+    "days_since_contact": 6,
+    "status": "on-track",
+    "tags": ["office", "team member"],
+    "bio": "Works in the same team. We collaborate on projects and share tech knowledge.",
+    "goal": 10,
+    "next_due_date": "2026-04-23"
+  },
+  {
+    "id": 12,
+    "name": "Sharmin Akhter",
+    "picture": "https://randomuser.me/api/portraits/women/52.jpg",
+    "email": "sharmin.akhter@gmail.com",
+    "days_since_contact": 19,
+    "status": "overdue",
+    "tags": ["neighbor", "childhood friend"],
+    "bio": "Grew up in the same neighborhood. We share many childhood memories.",
+    "goal": 14,
+    "next_due_date": "2026-04-09"
   }
 ]
