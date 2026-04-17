@@ -20,12 +20,12 @@ const Bannar = ({ friends }) => {
                         <p>On Track</p>
                     </div>
                     <div className="bg-white shadow-gray-400 p-4 rounded-md h-30 text-center">
-                        <p className='text-2xl font-bold '>1</p>
+                        <p className='text-2xl font-bold '>6</p>
                         <p>Need Attention</p>
                     </div>
                     <div className="bg-white shadow-gray-400 p-4 rounded-md h-30 text-center ">
                         
-                            <p className='text-2xl font-bold '>10</p>
+                            <p className='text-2xl font-bold '>12</p>
                         <p>Interactions This Month</p>
                         
                     </div>
