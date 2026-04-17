@@ -6,6 +6,9 @@ import { TbMessage, TbPhoneCall, TbVideo } from 'react-icons/tb';
 const TimeLine = () => {
   const { timeLine } = useContext(timeLineContext);
 
+  // console.log(timeLine)
+  console.log(timeLineContext);
+
   const statesIcons = (type) => {
     if (type === "call") {
       return <TbPhoneCall className='text-green-400 ' size={30} />
@@ -16,6 +19,8 @@ const TimeLine = () => {
 
   };
 
+  
+
   const [filter, setFilter] = useState("all");
 
   const filteredData =
@@ -23,7 +28,7 @@ const TimeLine = () => {
     ? timeLine
     : timeLine.filter(item => item.type === filter);
 
-    console.log(filteredData);
+    // console.log(filteredData);
 
   return (
     <div className='bg-gray-100 min-h-screen'>

@@ -45,7 +45,7 @@ const FriendsDetails = () => {
       <div className="">
         <h1 className='text-3xl font-bold text-center  m-5 py-5'>Friend Details</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-11/12 sm:max-w-11/12 mx-auto  ">
-          <div className="">
+          <div className="pb-5">
             <div className="bg-white shadow-gray-400 p-4 rounded-md items-center text-center">
               <div className="flex justify-center mb-3">
                 <img className='rounded-full' src={expectedFriend.picture} alt={expectedFriend.name} />
@@ -60,9 +60,10 @@ const FriendsDetails = () => {
               </div>
             </div>
             <div className="my-3 space-y-3">
-              <div className="bg-white text-gray-500 font-semibold  text-center shadow-2xl rounded-sm p-3 flex justify-center items-center gap-1.5 "><RiNotificationSnoozeLine /> Snooze 2 weeks </div>
-              <div className="bg-white text-gray-500 font-semibold text-center shadow-2xl rounded-sm p-3 flex justify-center items-center gap-1.5 "><RiArchiveLine />Archive</div>
-              <div className="bg-white text-error font-semibold text-center shadow-2xl rounded-sm p-3 flex justify-center items-center gap-1.5"> <RiDeleteBin6Line /> Delete</div>
+              <button className="bg-white btn text-gray-500 w-full font-semibold  text-center shadow-2xl rounded-sm p-3 flex justify-center items-center gap-1.5 "><RiNotificationSnoozeLine /> Snooze 2 weeks </button>
+              <button className="bg-white btn text-gray-500 w-full font-semibold text-center shadow-2xl rounded-sm p-3 flex justify-center items-center gap-1.5 "><RiArchiveLine />Archive</button>
+               
+              <button className="bg-white btn text-error w-full font-semibold text-center shadow-2xl rounded-sm p-3 flex justify-center items-center gap-1.5"> <RiDeleteBin6Line /> Delete </button>
             </div>
           </div>
           <div className="">
@@ -85,7 +86,7 @@ const FriendsDetails = () => {
               <div className=" flex justify-end">
                 <button className='btn text-blue-500 hover:text-blue-700'>Edit</button>
               </div>
-              <p>Connect every <span className='font-bold'>30 days</span></p>
+              <p>Connect every <span className='font-bold'>{expectedFriend.goal} days</span></p>
             </div>
             <div className="bg-white shadow-gray-400 p-7 rounded-md mt-5">
               <h4 className='text-xl mb-4'>Quick Check-In</h4>

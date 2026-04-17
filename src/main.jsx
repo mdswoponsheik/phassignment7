@@ -8,6 +8,9 @@ import MainLayout from './layout/mainLayout/MainLayout'
 import TimeLine from './Pages/TimeLine/TimeLine'
 import Stats from './Pages/Stats/Stats'
 import FriendsDetails from './Pages/FriendsDetails/FriendsDetails'
+import Error from './Error/Error'
+
+
 
 let router = createBrowserRouter([
   {
@@ -34,8 +37,8 @@ let router = createBrowserRouter([
     ]
   },
   {
-    path: '/about',
-    element: <h1>About</h1>
+    path: '*',
+    element: <Error />
   }
 ]);
 
